@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://b54c7ad6cogrm"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_2ifyw"]
+[ext_resource type="Texture2D" uid="uid://cj6xormygja1x" path="res://Mini Pixel Pack 3/UI objects/Item_held_box (16 x 16).png" id="1_nnhfv"]
+[ext_resource type="Texture2D" uid="uid://c1qtmgu2gu1ss" path="res://bar_background.png" id="2_4c7md"]
+[ext_resource type="PackedScene" uid="uid://crr2gxtgxt1cm" path="res://score_counter.tscn" id="2_hbnwe"]
+[ext_resource type="Texture2D" uid="uid://ct0lgoiryohfr" path="res://bar_foreground.png" id="3_vcqhw"]
+[ext_resource type="Texture2D" uid="uid://bd1m1f6xdmltw" path="res://Mini Pixel Pack 3/Items/Circle_+_Square_+_Missile_pick-ups (16 x 16).png" id="4_1s16x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn21l"]
+atlas = ExtResource("4_1s16x")
+region = Rect2(32, 2.08165e-12, 16, 16)
+
+[node name="UI" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+script = ExtResource("1_2ifyw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ShieldBar" type="TextureProgressBar" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 16)
+layout_mode = 2
+size_flags_vertical = 4
+value = 10.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("2_4c7md")
+texture_progress = ExtResource("3_vcqhw")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_nnhfv")
+stretch_mode = 2
+
+[node name="MarginContainer" type="CenterContainer" parent="HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/TextureRect/MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_xn21l")
+stretch_mode = 2
+
+[node name="ScoreCounter" parent="HBoxContainer" instance=ExtResource("2_hbnwe")]
+layout_mode = 2
+size_flags_horizontal = 3

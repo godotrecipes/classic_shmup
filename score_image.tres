@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://budpd467cmgfq"]
+
+[ext_resource type="Texture2D" uid="uid://c0lmfobnrs7br" path="res://Mini Pixel Pack 3/UI objects/Number_font (8 x 8).png" id="1_8dbcd"]
+
+[resource]
+atlas = ExtResource("1_8dbcd")
+region = Rect2(2.08165e-12, 2.08165e-12, 8, 8)
