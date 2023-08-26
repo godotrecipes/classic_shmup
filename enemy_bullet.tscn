@@ -48,7 +48,7 @@ script = ExtResource("1_gk4vk")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_aappp")
 autoplay = "default"
-frame_progress = 0.737751
+frame_progress = 0.140445
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ruvs5")

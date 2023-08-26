@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://b32476hejmrnj"]
 
-[ext_resource type="Script" path="res://ship.gd" id="1_5vr7v"]
+[ext_resource type="Script" path="res://player.gd" id="1_4pouc"]
 [ext_resource type="Texture2D" uid="uid://c7uwy5ydmq5in" path="res://Mini Pixel Pack 3/Player ship/Player_ship (16 x 16).png" id="1_jhf5r"]
 [ext_resource type="Texture2D" uid="uid://1huvnyjwjxyr" path="res://Mini Pixel Pack 3/Player ship/Boosters (16 x 16).png" id="2_6cdot"]
 [ext_resource type="PackedScene" uid="uid://ce2sbgdju6rp7" path="res://bullet.tscn" id="2_6pkbm"]
@@ -71,7 +71,7 @@ animations = [{
 size = Vector2(14, 14)
 
 [node name="Player" type="Area2D"]
-script = ExtResource("1_5vr7v")
+script = ExtResource("1_4pouc")
 bullet_scene = ExtResource("2_6pkbm")
 
 [node name="Ship" type="Sprite2D" parent="."]

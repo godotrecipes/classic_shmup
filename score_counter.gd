@@ -13,6 +13,9 @@ var digit_coords = {
 	0: Vector2(32, 8)
 }
 
+func _ready():
+	display_digits(123)
+
 func display_digits(n):
 	var s = "%08d" % n
 	for i in 8:
