@@ -66,4 +66,4 @@ func _on_gun_cooldown_timeout():
 func _on_area_entered(area):
 	if area.is_in_group("enemies"):
 		area.explode()
-		shield -= max_shield / 2
+		shield -= max_shield / 2.0

@@ -33,7 +33,7 @@ func _on_enemy_died(value):
 	$CanvasLayer/UI.update_score(score)
 	$Camera2D.add_trauma(0.5)
 	
-func _process(delta):
+func _process(_delta):
 	if get_tree().get_nodes_in_group("enemies").size() == 0 and playing:
 		spawn_enemies()
 	
